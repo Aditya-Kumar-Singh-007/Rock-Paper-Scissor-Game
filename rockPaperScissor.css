@@ -1,0 +1,135 @@
+body {
+  background-color: #f5f5dc; /* soft beige */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 1.5s ease-in-out;
+}
+
+/* Game Title */
+.head {
+  color: #fff;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  padding: 15px;
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fb3434, #ffdd00);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s ease-in;
+}
+
+/* Status/Result Box */
+.status {
+  border: 3px solid black;
+  border-radius: 30px;
+  width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: rgb(234, 219, 8);
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Choice Images */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+#mode {
+  border-radius: 30px;
+  margin: 10px;
+  padding: 2px;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 255));
+  color: white;
+  width: 100px;
+  height: 50px;
+  border: 3px solid whitesmoke;
+  float: right;
+  transition: background-color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  background: #fff;
+}
+
+/* Hover Effect */
+.image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  border: 3px solid green;
+}
+
+/* Scoreboard */
+.scorecard {
+  color: #000;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.scorecard p {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: #fff8c6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.4s ease-in-out;
+}
+.footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  background: #333;
+  color: #fff;
+  font-size: 18px;
+  border-top: 2px solid #fbb034;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/*dark mode*/
+
+/* dark mode */
+body.darkMode {
+  /* background: linear-gradient(45deg, rgb(0, 0, 0), rgb(136, 136, 136)); */
+  background: grey;
+}
+#mode.darkMode {
+  background: linear-gradient(90deg, white, black);
+}
+.head.darkMode {
+  /* background: linear-gradient(90deg, rgb(95, 93, 93), black); */
+  background: rgb(66, 66, 66);
+}
+.footer.darkMode {
+  background-color:grey;
+}
+p.darkMode {
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+.value.darkMode {
+  color: white;
+}
