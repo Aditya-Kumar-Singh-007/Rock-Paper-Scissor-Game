@@ -44,6 +44,7 @@ body {
   margin: 30px auto;
   flex-wrap: wrap;
 }
+
 #mode {
   border-radius: 30px;
   margin: 10px;
@@ -58,6 +59,11 @@ body {
   cursor: pointer;
 }
 
+.image-container {
+  border-radius: 50%;
+  transition: box-shadow 0.2s;
+}
+
 .image {
   height: 150px;
   width: 150px;
@@ -65,16 +71,18 @@ body {
   border-radius: 50%;
   object-fit: cover;
   padding: 5px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, border 0.2s;
   cursor: pointer;
-
   background: #fff;
 }
 
 /* Hover Effect */
+.image-container:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
 .image:hover {
   transform: scale(1.1);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
   border: 3px solid green;
 }
 
@@ -98,6 +106,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.4s ease-in-out;
 }
+
 .footer {
   text-align: center;
   padding: 15px;
@@ -110,17 +119,13 @@ body {
 }
 
 /*dark mode*/
-
-/* dark mode */
 body.darkMode {
-  /* background: linear-gradient(45deg, rgb(0, 0, 0), rgb(136, 136, 136)); */
   background: grey;
 }
 #mode.darkMode {
   background: linear-gradient(90deg, white, black);
 }
 .head.darkMode {
-  /* background: linear-gradient(90deg, rgb(95, 93, 93), black); */
   background: rgb(66, 66, 66);
 }
 .footer.darkMode {
@@ -132,4 +137,70 @@ p.darkMode {
 }
 .value.darkMode {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .head {
+      font-size: 30px;
+      padding: 10px;
+  }
+  .status {
+      width: 85%;
+      margin: 20px auto;
+      font-size: 18px;
+      padding: 15px;
+  }
+  .box {
+      gap: 20px;
+  }
+  .image {
+      height: 120px;
+      width: 120px;
+  }
+  .scorecard {
+      gap: 40px;
+      font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .head {
+      font-size: 24px;
+      padding: 8px;
+  }
+  #mode {
+      width: 80px;
+      height: 40px;
+      font-size: 14px;
+      margin: 5px;
+  }
+  .status {
+      width: 90%;
+      margin: 15px auto;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 20px;
+  }
+  .box {
+      flex-direction: column;
+      gap: 15px;
+  }
+  .image {
+      height: 100px;
+      width: 100px;
+  }
+  .scorecard {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 24px;
+      margin-top: 10px;
+  }
+  .scorecard p {
+      padding: 5px 10px;
+  }
+  .footer {
+      font-size: 14px;
+      padding: 10px;
+      margin-top: 20px;
+  }
 }
